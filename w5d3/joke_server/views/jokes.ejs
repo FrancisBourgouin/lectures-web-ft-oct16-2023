@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jokes!</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Jokes!</h1>
+    <main>
+      <% for(const joke of jokes){ %>
+      <article>
+        <p>Question: <%= joke.question %></p>
+        <p>Answer: <%= joke.answer %></p>
+        <p><a href="/jokes/<%= joke.id %>">Link to joke</a></p>
+      </article>
+      <% } %>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jokes!</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Joke!</h1>
+    <main>
+      <article>
+        <p>Question: <%= joke.question %></p>
+        <p>Answer: <%= joke.answer %></p>
+        <p>Joke by: <%= joke.author_name %></p>
+        <p><a href="/jokes/<%= joke.id %>">Link to joke</a></p>
+      </article>
+    </main>
+  </body>
+</html>
