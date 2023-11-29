@@ -1,0 +1,40 @@
+.image {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-size: cover;
+  border-radius: 50%;
+}
+.image.big {
+  width: 7em;
+  height: 7em;
+}
+
+.ReplyListItem {
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "profile content"
+    "name content";
+  gap: 1em;
+  padding: 1em;
+}
+
+.ReplyListItem:nth-of-type(2n) {
+  background-color: #bada55;
+  color: black;
+}
+
+.ReplyListItem div {
+  grid-area: profile;
+}
+.ReplyListItem p:first-of-type {
+  grid-area: name;
+  text-align: center;
+}
+.ReplyListItem p:last-of-type {
+  grid-area: content;
+}
