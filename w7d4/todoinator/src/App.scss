@@ -1,0 +1,38 @@
+.TodoListItem {
+  max-width: 900px;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  gap: 1em;
+
+  list-style-type: none;
+
+  border: 2px solid white;
+
+  button:first-of-type {
+    margin-left: auto;
+  }
+}
+
+.TodoList {
+  h1 {
+    text-align: center;
+  }
+}
+
+.TodoForm {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  padding: 1em;
+  margin: 1em;
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+
+    input {
+      font-size: 1.2em;
+    }
+  }
+}
