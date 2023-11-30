@@ -13,32 +13,27 @@ import { todo1, todo2, todosObj } from "./data/todoData";
 // const fakeDelete = (todoId) => console.log("function delete was called", todoId);
 // const fakeSubmit = (todoInfo) => console.log("function submit was called", todoInfo);
 
-import {
-  addTodoHelper,
-  deleteTodoHelper,
-  toggleTodoCompletion,
-  editTodoHelper,
-} from "./helpers/todoHelpers";
+import * as todoHelpers from "./helpers/todoHelpers";
 
 function App() {
   const [todos, setTodos] = useState(todosObj);
   const { sayWow } = useWow();
 
   const toggleTodo = (todoId) => {
-    const updatedTodos = toggleTodoCompletion(todos, todoId);
+    const updatedTodos = todoHelpers.toggle(todos, todoId);
 
     setTodos(updatedTodos);
   };
 
   const addTodo = (todoInfo) => {
-    const updatedTodos = addTodoHelper(todos, todoInfo);
+    const updatedTodos = todoHelpers.add(todos, todoInfo);
 
     setTodos(updatedTodos);
     sayWow();
   };
 
   const deleteTodo = (todoId) => {
-    const updatedTodos = deleteTodoHelper(todos, todoId);
+    const updatedTodos = todoHelpers.delete(todos, todoId);
 
     setTodos(updatedTodos);
   };

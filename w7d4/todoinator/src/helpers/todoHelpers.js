@@ -1,4 +1,4 @@
-export const addTodoHelper = (todos, todoInfo) => {
+export const add = (todos, todoInfo) => {
   const { task, dueDate, color } = todoInfo;
   const id = Math.floor(Math.random() * 3272341390831);
 
@@ -9,7 +9,7 @@ export const addTodoHelper = (todos, todoInfo) => {
   return updatedTodos;
 };
 
-export const editTodoHelper = (todos, todoId, todoInfo) => {
+export const edit = (todos, todoId, todoInfo) => {
   const { task, dueDate, color } = todoInfo;
 
   const updatedTodo = { ...todos[todoId], task, dueDate, color };
@@ -19,7 +19,7 @@ export const editTodoHelper = (todos, todoId, todoInfo) => {
   return updatedTodos;
 };
 
-export const deleteTodoHelper = (todos, todoId) => {
+export const remove = (todos, todoId) => {
   const updatedTodos = { ...todos };
 
   delete updatedTodos[todoId];
@@ -27,7 +27,7 @@ export const deleteTodoHelper = (todos, todoId) => {
   return updatedTodos;
 };
 
-export const toggleTodoCompletion = (todos, todoId) => {
+export const toggle = (todos, todoId) => {
   const updatedTodo = { ...todos[todoId] };
 
   updatedTodo.isComplete = !updatedTodo.isComplete;
