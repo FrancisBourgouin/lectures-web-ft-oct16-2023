@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Urls</h1>
+
+<div id="urls">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Short URL</th>
+      <th scope="col">Long URL</th>
+      <th scope="col">Description</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% @urls.each do |url| %>
+  <tr>
+    <td>
+      <a href="/u/<%= url.short_url %>" target="_blank">
+      
+      <%= url.short_url %>
+      </a>
+    </td>
+
+    <td><%= url.long_url %></td>
+
+    <td><%= url.description %></td>
+    <td><%= link_to "Edit/Delete", url%></td>
+    </tr>
+  <% end %>
+  </tbody>
+  </table>
+</div>
+
+<%= link_to "New url", new_url_path %>
