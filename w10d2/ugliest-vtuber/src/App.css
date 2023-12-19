@@ -1,0 +1,49 @@
+.Face {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60vmin;
+  height: 60vmin;
+  border: 1px solid white;
+
+  display: grid;
+  grid-template-areas:
+    "leftEye . rightEye"
+    ". . ."
+    "mouth mouth mouth";
+  align-items: center;
+  justify-content: center;
+}
+
+.Face .leftEye {
+  grid-area: leftEye;
+}
+.Face .rightEye {
+  grid-area: rightEye;
+}
+.Face .mouth {
+  grid-area: mouth;
+}
+
+.Face .leftEye,
+.Face .rightEye {
+  width: 10vmin;
+  height: 10vmin;
+  background: white;
+}
+
+.Face .mouth {
+  width: 50vmin;
+  height: 10vmin;
+  border: 1vmin solid white;
+}
+
+.Face .leftBrow,
+.Face .rightBrow {
+  position: relative;
+  top: -20px;
+  background: white;
+  height: 1vmin;
+  width: 10vmin;
+}
